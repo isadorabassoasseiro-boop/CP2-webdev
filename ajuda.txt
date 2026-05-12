@@ -1,0 +1,75 @@
+console.log(nome.toLowerCase().includes("a")); // deixa as letras todas minusculas 'lowercase'
+console.log(nome)
+console.log(nome.trim()) // tira espaços em branco 'trim'
+console.log(nome.replace("a", "o")) //troca o primeiro 'a pelo 'o
+console.log(nome.replaceAll("a", "o")) // troca todos os 'a pelo 'o
+console.log(Math.random())//gera numeros aleatorios, de 0 à 0.999
+console.log(Math.floor(Math.random() * 11)) 0 ate 10
+console.log(Math.floor(Math.random() * 10)+1) 1 ate 10
+console.log(nome.leght) // quantidade de caracteres
+
+
+// deixa apenas duas casas depois da virgula 
+alert(`Seu IMC é ${imc.toFixed(2)}`);
+
+  menu = prompt(`
+1 - Área do quadrado
+2 - Área do círculo
+3 - Área do triângulo
+0 - Sair
+`)
+
+/////////////////////////////////////////
+
+for (início; condição; incremento) {
+ // código que repete
+}
+
+for (let i = 1; i <= 5; i++) {
+ console.log(i)
+}
+
+    while (nota < 0 || nota > 10 || isNaN(nota))
+////////////////////////////////////////
+
+"abacaxi" < "banana" // true → "a" vem antes de "b"
+"ana" < "antonio" // true → os dois começam com "an", mas "a" vem antes de "t"
+"casa" === "Casa" // false → maiúsculas e minúsculas são diferentes
+
+const nome1 = "Ana"
+const nome2 = "ana"
+nome1.toLowerCase() === nome2.toLowerCase() // true
+///////////////////////////////////////
+
+
+&& E (as duas precisam ser verdadeiras) 
+|| OU (pelo menos uma verdadeira) 
+! NÃO (inverte o valor) 
+
+/////////////////////////////////////
+
+Number - Converte em um número inteiro ou decimal e retorna NaN caso a conversão não seja possível.
+console.log(Number("42")); // 42 (número inteiro)
+console.log(Number("42.99")); // 42.99 (mantém os decimais)
+console.log(Number("42px")); // NaN (não consegue converter)
+console.log(Number(" 42 ")); // 42 (ignora espaços)
+console.log(Number("")); // 0 (string vazia vira zero)
+console.log(Number(true)); // 1 (true → 1, false → 0)
+
+parteInt - Converte em um número inteiro e para no primeiro caractere inválido.
+console.log(parseInt("42")); // 42
+console.log(parseInt("42.99")); // 42 (descarta a parte decimal)
+console.log(parseInt("42px")); // 42 (para ao encontrar um caractere inválido)
+console.log(parseInt(" 42 ")); // 42 (ignora espaços)
+console.log(parseInt("")); // NaN (não consegue converter)
+console.log(parseInt("0xF", 16)); // 15 (interpreta como hexadecimal)
+console.log(parseInt("101", 2)); // 5 (interpreta como binário)
+
+parseFloat - Semelhante ao parseInt, porém converte mantendo o valor decimal.
+console.log(parseFloat("42")); // 42
+console.log(parseFloat("42.99")); // 42.99 (mantém a parte decimal)
+console.log(parseFloat("42.99px")); // 42.99 (para ao encontrar um caractere inválido)
+console.log(parseFloat(" 42.5 ")); // 42.5 (ignora espaços)
+console.log(parseFloat("3.14e2")); // 314 (interpreta notação científica)
+console.log(parseFloat("abc42")); // NaN (não começa com número)
+
