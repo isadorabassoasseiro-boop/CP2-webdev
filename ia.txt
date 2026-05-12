@@ -1,0 +1,265 @@
+# 1. Tabuada com `for`
+
+### Enunciado
+
+Faça um programa que peça um número ao usuário e mostre a tabuada de 1 até 10 usando `for`.
+
+### Resolução
+
+```javascript
+let numero = Number(prompt("Informe um valor"))
+
+for(let i = 1; i <= 10; i++){
+    console.log(`${numero} x ${i} = ${numero * i}`)
+}
+```
+
+---
+
+# 2. Soma e quantidade de números com `while`
+
+### Enunciado
+
+Leia números até o usuário digitar `0`.
+Mostre:
+
+* soma dos números
+* quantidade digitada
+
+### Resolução
+
+```javascript
+let numero = 1
+let soma = 0
+let i = 0
+
+while(numero != 0){
+    numero = Number(prompt("Informe um valor"))
+
+    soma += numero
+    i++
+}
+
+alert(`Soma: ${soma}`)
+alert(`Quantidade: ${i - 1}`)
+```
+
+---
+
+# 3. Menu com `do...while`
+
+### Enunciado
+
+Crie um menu com:
+
+1. Data atual
+2. Hora atual
+3. Número aleatório
+4. Sair
+
+### Resolução
+
+```javascript
+let menu
+
+do{
+    menu = prompt(`
+1. Mostrar data atual
+2. Mostrar hora atual
+3. Gerar número aleatório
+4. Sair
+`)
+
+    if(menu === "1"){
+        console.log(new Date().toLocaleDateString())
+
+    }else if(menu === "2"){
+        console.log(new Date().toLocaleTimeString())
+
+    }else if(menu === "3"){
+        console.log(Math.floor(Math.random() * 100) + 1)
+
+    }else if(menu === "4"){
+        break
+
+    }else{
+        alert("Número inválido")
+    }
+
+}while(menu !== "4")
+```
+
+---
+
+# 4. Função par ou ímpar
+
+### Enunciado
+
+Crie uma função que receba um número e retorne:
+
+* `"Par"`
+* `"Ímpar"`
+
+### Resolução
+
+```javascript
+let numero = Number(prompt("Informe um valor"))
+
+function parOuImpar(numero){
+
+    if(numero % 2 === 0){
+        return "Par"
+    }else{
+        return "Impar"
+    }
+}
+
+alert(parOuImpar(numero))
+```
+
+---
+
+# 5. Números pares de 1 até 100
+
+### Enunciado
+
+Mostre todos os números pares entre 1 e 100 usando `for`.
+
+### Resolução
+
+```javascript
+for(let i = 0; i <= 100; i += 2){
+    console.log(i)
+}
+```
+
+---
+
+# 6. Média do aluno com função
+
+### Enunciado
+
+Crie uma função que receba 3 notas e:
+
+* calcule a média
+* mostre se o aluno foi aprovado ou reprovado
+
+### Resolução
+
+```javascript
+let nota1 = Number(prompt("Informe a primeira nota"))
+let nota2 = Number(prompt("Informe a segunda nota"))
+let nota3 = Number(prompt("Informe a terceira nota"))
+
+function calcularMedia(nota1, nota2, nota3){
+
+    let media = (nota1 + nota2 + nota3) / 3
+
+    if(media >= 6){
+        return "Aprovado"
+    }else{
+        return "Reprovado"
+    }
+}
+
+alert(calcularMedia(nota1, nota2, nota3))
+```
+
+---
+
+# 7. Números aleatórios
+
+### Enunciado
+
+Gere 10 números aleatórios entre 1 e 100.
+
+### Resolução
+
+```javascript
+for(let i = 1; i <= 10; i++){
+    console.log(Math.floor(Math.random() * 100) + 1)
+}
+```
+
+---
+
+# 8. Validação de senha
+
+### Enunciado
+
+Peça uma senha até o usuário digitar `"fiap123"`.
+
+### Resolução
+
+```javascript
+let senha = ""
+
+while(senha !== "fiap123"){
+    senha = prompt("Digite a senha")
+}
+
+alert("Senha correta")
+```
+
+---
+
+# 9. Conversão de horas
+
+### Enunciado
+
+Crie uma função que converta horas para:
+
+* minutos
+* segundos
+
+### Resolução
+
+```javascript
+function converterHoras(horas){
+
+    let minutos = horas * 60
+    let segundos = horas * 3600
+
+    return `${horas} horas = ${minutos} minutos e ${segundos} segundos`
+}
+
+alert(converterHoras(2))
+```
+
+---
+
+# 10. Objeto aluno
+
+### Enunciado
+
+Crie um objeto `aluno` contendo:
+
+* nome
+* curso
+* rm
+* notas
+
+Depois calcule a média.
+
+### Resolução
+
+```javascript
+const aluno = {
+    nome: "Ana",
+    curso: "ADS",
+    rm: 12345,
+    notas: [8, 7, 9]
+}
+
+let soma = 0
+
+for(let i = 0; i < aluno.notas.length; i++){
+    soma += aluno.notas[i]
+}
+
+let media = soma / aluno.notas.length
+
+console.log(aluno.nome)
+console.log(media)
+```
+
